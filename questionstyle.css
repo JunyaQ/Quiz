@@ -33,25 +33,19 @@
     margin-bottom: 20px;
     font-family: 'Courier New', Courier, monospace;
 }
-.choice{
+.choice0, .choice1, .choice2, .choice3{
     font-family: 'Courier New', Courier, monospace;
     display: flex;
     margin-bottom: 5px;
     border: 2px solid ;
     background-color: purple;
-    padding: 2px 1px 0;
+    padding: 5px 15px 0;
     width: 300px;
     border-radius: 8px;
-    
-}
-p{
-    font-family: 'Courier New', Courier, monospace;
     color: white;
-    margin-left: 15px;
-    
-    
 }
-.choice:hover{
+
+.choice0:hover, .choice1:hover, .choice2:hover, .choice3:hover{
     background-color: plum;
     cursor: pointer;
 }
