@@ -1,8 +1,7 @@
 var questoin = document.getElementById("quesiton");
 //var clickoption = document.getElementById("choice1","choice2","choice3","choice0");
 var currentquestion = '';
-var score = 0;
-var timer = 60;
+var timer = 60;//score == timer
 var questioncounter =0;
 const addscore = 10;
 var correctanswer ='';
@@ -64,52 +63,64 @@ function getquestionchoices(){
     //console.log(correctanswer);
 }
 
-/**compare function, compare correct answer to the clicked answer -- compare, return result, turn to the next question or ++*/
+/**compare function, compare correct answer to the clicked answer -- compare, return result, turn to the next question and score*/
 function compare0(){
+    console.log("score "+timer);
     console.log("this is 0");
     chooseanswer = currentquestion.options[0];
     if(chooseanswer == correctanswer){
         alert("correct");
+        timer = timer +10;
         return true;
     }
     else if(chooseanswer!=correctanswer){
         alert("wrong");
+        timer = timer-10;
         return false;
     }
 }
 function compare1(){
+    console.log("score "+timer);
     console.log("this is 1");
     chooseanswer = currentquestion.options[1];
     if(chooseanswer == correctanswer){
         alert("correct");
+        timer = timer +10;
         return true;
     }
     else if(chooseanswer!=correctanswer){
         alert("wrong");
+        timer = timer-10;
         return false;
     }
 }
 function compare2(){
+    console.log("score "+timer);
     console.log("this is 2");
     chooseanswer = currentquestion.options[2];
     if(chooseanswer == correctanswer){
         alert("correct");
+        timer = timer +10;
         return true;
     }
     else if(chooseanswer!=correctanswer){
         alert("wrong");
+        timer = timer -10;
         return false;
     }
 }
 function compare3(){
+    console.log("score "+timer);
     console.log("this is 3");
     chooseanswer = currentquestion.options[3];
     if(chooseanswer == correctanswer){
         alert("correct");
+        timer = timer +10;
         return true;
     }
     else if(chooseanswer!=correctanswer){
         alert("wrong");
+        timer = timer -10;
         return false;
     }
 }
@@ -123,14 +134,15 @@ function check(){
     choice0.addEventListener("click",compare0);
     choice1.addEventListener("click",compare1);
     choice2.addEventListener("click",compare2);
-    choice3.addEventListener("click",compare3);
-     
+    choice3.addEventListener("click",compare3);   
 }
 
 function start(){
-    score =0;
+  
     getquestionchoices();
     check();
+    console.log("score "+timer);
+   
 
 }
 start();
