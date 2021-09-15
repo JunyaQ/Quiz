@@ -3,6 +3,7 @@ var questoin = document.getElementById("quesiton");
 var currentquestion = '';
 var score = parseInt(document.getElementById("timer").innerHTML);//score == timer
 var questioncounter =0;
+const totalquestion = 5;
 const addscore = 10;
 var correctanswer ='';
 var chooseanswer = '';
@@ -69,14 +70,24 @@ function compare0(){
     console.log("this is 0");
     chooseanswer = currentquestion.options[0];
     if(chooseanswer == correctanswer){
-        alert("correct");;
-        return true;
+        alert("correct");
+        if(score!=0 && questioncounter<totalquestion){
+        getquestionchoices();
+        }
+        else{
+            alert("name and highest score");
+        }
     }
     else if(chooseanswer!=correctanswer){
         alert("wrong");
         score = score-10;
         timer.innerText=score;
-        return false;
+        if(score!=0 && questioncounter<totalquestion){
+            getquestionchoices();
+            }
+            else{
+                alert("name and highest score");
+            }
     }
 }
 function compare1(){
@@ -85,13 +96,23 @@ function compare1(){
     chooseanswer = currentquestion.options[1];
     if(chooseanswer == correctanswer){
         alert("correct");
-        return true;
+        if(score!=0 && questioncounter<totalquestion){
+            getquestionchoices();
+            }
+            else{
+                alert("name and highest score");
+            }
     }
     else if(chooseanswer!=correctanswer){
         alert("wrong");
         score = score-10;
         timer.innerText=score;
-        return false;
+        if(score!=0 && questioncounter<totalquestion){
+            getquestionchoices();
+            }
+            else{
+                alert("name and highest score");
+            }
     }
 }
 function compare2(){
@@ -100,13 +121,23 @@ function compare2(){
     chooseanswer = currentquestion.options[2];
     if(chooseanswer == correctanswer){
         alert("correct");
-        return true;
+        if(score!=0 && questioncounter<totalquestion){
+            getquestionchoices();
+            }
+            else{
+                alert("name and highest score");
+            }
     }
     else if(chooseanswer!=correctanswer){
         alert("wrong");
         score = score -10;
         timer.innerText=score;
-        return false;
+        if(score!=0 && questioncounter<totalquestion){
+            getquestionchoices();
+            }
+            else{
+                alert("name and highest score");
+            }
     }
 }
 function compare3(){
@@ -115,17 +146,28 @@ function compare3(){
     chooseanswer = currentquestion.options[3];
     if(chooseanswer == correctanswer){
         alert("correct");
-        return true;
+        if(score!=0 && questioncounter<totalquestion){
+            getquestionchoices();
+            }
+            else{
+                alert("name and highest score");
+            }
     }
     else if(chooseanswer!=correctanswer){
         alert("wrong");
         score = score -10;
         timer.innerText=score;
-        return false;
+        if(score!=0 && questioncounter<totalquestion){
+            getquestionchoices();
+            }
+            else{
+                alert("name and highest score");
+            }
     }
 }
 
-
+ 
+//check if the answer correct
 function check(){
     var choice0 = document.getElementById("choice0");//get answer0
     var choice1 = document.getElementById("choice1");
@@ -138,13 +180,14 @@ function check(){
 }
 
 function start(){
-  
+    
     getquestionchoices();
     check();
     console.log("start"+score);
     console.log(typeof(score));
-    
     console.log("score "+score);
+    
+    
    
 
 }
