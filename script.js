@@ -7,6 +7,7 @@ const totalquestion = 5;
 const addscore = 10;
 var correctanswer ='';
 var chooseanswer = '';
+var submit = document.getElementById("invisible");
 
 
 /*question list with answers*/ 

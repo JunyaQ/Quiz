@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Submit</title>
     <link rel="stylesheet" href="reset.css">
@@ -12,12 +12,15 @@
     <div class="container" id="container">
     <h1>All done!</h1>
     <br/>
-    <h3>Your final score is <a>number</a></h3>
-    </div>
+    <h3>Your final score is <p> "number"</p></h3>
+    <br/>
     <form>
-        <p>Enter Initials: </p><input type="text" id="nameinital" class="nameinitial">
-        <button onclick="">Submit</button>
+        <p>Enter Initials: </p><br/>
+        <input type="text" id="nameinital" class="nameinitial" placeholder="name inital"><br/>
+        <button type="submit" class="submitbutton" id="submitbutton" >Submit</button>
+        <!--onclick="submitscore(event)"-->
     </form>
-    
+</div>
+    <script src="submitscript.js"></script>
 </body>
 </html>
