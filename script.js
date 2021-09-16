@@ -79,23 +79,26 @@ function compare0(){
     if(chooseanswer == correctanswer){
         //alert("correct");
         result.innerText = "Correct";
-        if(score!=0 && questioncounter<totalquestion){
+        if(score>=0 && questioncounter<totalquestion){
         getquestionchoices();
         }
         else{
             alert("name and highest score");
+            localStorage.setItem("newname",score);
         }
     }
     else if(chooseanswer!=correctanswer){
         //alert("wrong");
         result.innerText = "Wrong";
         score = score-10;
-        timer.innerText=score;
-        if(score!=0 && questioncounter<totalquestion){
+        
+        if(score>=0 && questioncounter<totalquestion){
+            timer.innerText=score;
             getquestionchoices();
             }
             else{
                 alert("name and highest score");
+                localStorage.setItem("newname",score);
             }
     }
 }
@@ -106,23 +109,26 @@ function compare1(){
     if(chooseanswer == correctanswer){
         //alert("correct");
         result.innerText = "Correct";
-        if(score!=0 && questioncounter<totalquestion){
+        if(score>=0 && questioncounter<totalquestion){
             getquestionchoices();
             }
             else{
                 alert("name and highest score");
+                localStorage.setItem("newname",score);
             }
     }
     else if(chooseanswer!=correctanswer){
         //alert("wrong");
         result.innerText = "Wrong";
         score = score-10;
-        timer.innerText=score;
-        if(score!=0 && questioncounter<totalquestion){
+        
+        if(score>=0 && questioncounter<totalquestion){
+            timer.innerText=score;
             getquestionchoices();
             }
             else{
                 alert("name and highest score");
+                localStorage.setItem("newname",score);
             }
     }
 }
@@ -133,23 +139,26 @@ function compare2(){
     if(chooseanswer == correctanswer){
         //alert("correct");
         result.innerText = "Correct";
-        if(score!=0 && questioncounter<totalquestion){
+        if(score>=0 && questioncounter<totalquestion){
             getquestionchoices();
             }
             else{
                 alert("name and highest score");
+                localStorage.setItem("newname",score);
             }
     }
     else if(chooseanswer!=correctanswer){
        // alert("wrong");
        result.innerText = "Wrong";
         score = score -10;
-        timer.innerText=score;
-        if(score!=0 && questioncounter<totalquestion){
+        
+        if(score>=0 && questioncounter<totalquestion){
+            timer.innerText=score;
             getquestionchoices();
             }
             else{
                 alert("name and highest score");
+                localStorage.setItem("newname",score);
             }
     }
 }
@@ -160,23 +169,25 @@ function compare3(){
     if(chooseanswer == correctanswer){
         //alert("correct");
         result.innerText = "Correct";
-        if(score!=0 && questioncounter<totalquestion){
+        if(score>=0 && questioncounter<totalquestion){
             getquestionchoices();
             }
             else{
                 alert("name and highest score");
+                localStorage.setItem("newname",score);
             }
     }
     else if(chooseanswer!=correctanswer){
         //alert("wrong");
         result.innerText = "Wrong";
         score = score -10;
-        timer.innerText=score;
-        if(score!=0 && questioncounter<totalquestion){
+        if(score>=0 && questioncounter<totalquestion){
+            timer.innerText=score;
             getquestionchoices();
             }
             else{
                 alert("name and highest score");
+                localStorage.setItem("newname",score);
             }
     }
 }
@@ -194,16 +205,17 @@ function check(){
 
 //timer countdown
 function countdown(){
+if(score <0){
+    clearTimeout(0);
+    }
+else{
 var space;
 timer.innerText = score;
 score = score -1;
 space = setTimeout(countdown,1000);
-if(score <0){
-    clearTimeout(space);
-}
-}
+    }
 
-
+}
 
 function start(){
     countdown();
