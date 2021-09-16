@@ -1,0 +1,45 @@
+
+h1, h3{
+    font-family: 'Courier New', Courier, monospace;
+    text-align: center;
+    display: block;
+    margin: 0 auto;
+    margin-top: 30px;
+}
+
+p{
+    margin: 0 auto;
+    font-family: 'Courier New', Courier, monospace;
+    display: inline;
+    margin: 0 auto;
+    margin-left: 200px;
+    font-weight: bold;
+}
+form,p{
+    margin-top: 30px;
+}
+
+
+button{
+    font-family: 'Courier New', Courier, monospace;
+    border: 2px solid ;
+    background-color: purple;
+    padding: 5px 5px 5px 5px;
+    width: 100px;
+    border-radius: 8px;
+    color: white;
+    font-size: medium;
+    
+}
+button:hover{
+    background-color: plum;
+    cursor: pointer;
+
+}
+.container{
+    text-align: center;
+    display: inline-block;
+    margin-left: 30%;
+    margin-right: auto;
+    vertical-align: middle;
+}
