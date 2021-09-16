@@ -1,4 +1,4 @@
-var questoin = document.getElementById("quesiton");
+var question = document.getElementById("quesiton");
 //var clickoption = document.getElementById("choice1","choice2","choice3","choice0");
 var currentquestion = '';
 var score = parseInt(document.getElementById("timer").innerHTML);//score == timer
@@ -7,44 +7,50 @@ const totalquestion = 5;
 const addscore = 10;
 var correctanswer ='';
 var chooseanswer = '';
-var correct = false;
 
 
 /*question list with answers*/ 
 var questionlist =[
     {
-     number: 1,
-     question:"AAAA",
-     answer:  "a",
-     options:["a","b","c","d"] 
+     question:"Which type of JavaScript language ?",
+     answer:  "2. Object-Based",
+     options:["1. Object-Oriented","2. Object-Based","3. Assembly-language","4. High-level"] 
     },
 
     {
-        number: 2,
-        question:"BBBB",
-        answer:  "b",
-        options:["a","b","c","d"] 
+        question:"Which one of the following also known as Conditional Expression:",
+        answer:  "4. immediate if",
+        options:["1. Alternative to if-else","2. Switch statement","3. If-then-else statement","4. immediate if"] 
        },
 
     {
-        number: 3,
-        question:"CCCC",
-        answer:  "c",
-        options:["a","b","c","d"] 
+        question:"In JavaScript, what is a block of statement?",
+        answer:  "2. block that combines a number of statements into a single compound statement",
+        options:["1. Conditional block","2. block that combines a number of statements into a single compound statement","3. both conditional block and a single statement","4. block that contains a single statement"] 
     },
 
     {
-        number: 4,
-        question:"BBBB",
-        answer:  "b",
-        options:["a","b","c","d"] 
+        question:"When interpreter encounters an empty statements, what it will do:",
+        answer:  "4. Ignores the statements",
+        options:["1. Shows a warning","2. Prompts to complete the statement","3. Throws an error","4. Ignores the statements"] 
        },
 
        {
-        number: 5,
-        question:"DDDD",
-        answer:  "d",
-        options:["a","b","c","d"] 
+        question:" Which of the following variables takes precedence over the others if the names are the same?",
+        answer:  "2. The local element",
+        options:["1. Global variable","2. The local element","3. The two of the above","4. None of the above"] 
+       },
+
+       {
+           question:"Which one of the following is the correct way for calling the JavaScript code?",
+           answer:"4. Function/Method",
+           options:["1. Preprocessor","2. Triggering Event","3. RMI","4. Function/Method"]
+       },
+
+       {
+           question:"Which of the following type of a variable is volatile?",
+           answer:"1. Mutable variable",
+           options:["1. Mutable variable","2. Dynamic variable","3. Volatile variable","4. Immutable variable"]
        }
 
 ]
@@ -53,7 +59,7 @@ function getquestionchoices(){
    
     currentquestion = questionlist[questioncounter];
     questioncounter++;
-    question.innerText = currentquestion.question;
+    questiontext.innerText = currentquestion.question;
     //console.log(currentquestion.question);
     //console.log(currentquestion.options[1]);
     choice0.innerText = currentquestion.options[0];
@@ -70,7 +76,8 @@ function compare0(){
     console.log("this is 0");
     chooseanswer = currentquestion.options[0];
     if(chooseanswer == correctanswer){
-        alert("correct");
+        //alert("correct");
+        result.innerText = "Correct";
         if(score!=0 && questioncounter<totalquestion){
         getquestionchoices();
         }
@@ -79,7 +86,8 @@ function compare0(){
         }
     }
     else if(chooseanswer!=correctanswer){
-        alert("wrong");
+        //alert("wrong");
+        result.innerText = "Wrong";
         score = score-10;
         timer.innerText=score;
         if(score!=0 && questioncounter<totalquestion){
@@ -95,7 +103,8 @@ function compare1(){
     console.log("this is 1");
     chooseanswer = currentquestion.options[1];
     if(chooseanswer == correctanswer){
-        alert("correct");
+        //alert("correct");
+        result.innerText = "Correct";
         if(score!=0 && questioncounter<totalquestion){
             getquestionchoices();
             }
@@ -104,7 +113,8 @@ function compare1(){
             }
     }
     else if(chooseanswer!=correctanswer){
-        alert("wrong");
+        //alert("wrong");
+        result.innerText = "Wrong";
         score = score-10;
         timer.innerText=score;
         if(score!=0 && questioncounter<totalquestion){
@@ -120,7 +130,8 @@ function compare2(){
     console.log("this is 2");
     chooseanswer = currentquestion.options[2];
     if(chooseanswer == correctanswer){
-        alert("correct");
+        //alert("correct");
+        result.innerText = "Correct";
         if(score!=0 && questioncounter<totalquestion){
             getquestionchoices();
             }
@@ -129,7 +140,8 @@ function compare2(){
             }
     }
     else if(chooseanswer!=correctanswer){
-        alert("wrong");
+       // alert("wrong");
+       result.innerText = "Wrong";
         score = score -10;
         timer.innerText=score;
         if(score!=0 && questioncounter<totalquestion){
@@ -145,7 +157,8 @@ function compare3(){
     console.log("this is 3");
     chooseanswer = currentquestion.options[3];
     if(chooseanswer == correctanswer){
-        alert("correct");
+        //alert("correct");
+        result.innerText = "Correct";
         if(score!=0 && questioncounter<totalquestion){
             getquestionchoices();
             }
@@ -154,7 +167,8 @@ function compare3(){
             }
     }
     else if(chooseanswer!=correctanswer){
-        alert("wrong");
+        //alert("wrong");
+        result.innerText = "Wrong";
         score = score -10;
         timer.innerText=score;
         if(score!=0 && questioncounter<totalquestion){
@@ -165,8 +179,6 @@ function compare3(){
             }
     }
 }
-
- 
 //check if the answer correct
 function check(){
     var choice0 = document.getElementById("choice0");//get answer0
