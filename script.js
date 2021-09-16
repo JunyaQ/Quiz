@@ -192,8 +192,21 @@ function check(){
     choice3.addEventListener("click",compare3);   
 }
 
+//timer countdown
+function countdown(){
+var space;
+timer.innerText = score;
+score = score -1;
+space = setTimeout(countdown,1000);
+if(score <0){
+    clearTimeout(space);
+}
+}
+
+
+
 function start(){
-    
+    countdown();
     getquestionchoices();
     check();
     console.log("start"+score);
