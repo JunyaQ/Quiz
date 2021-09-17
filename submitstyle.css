@@ -52,3 +52,9 @@ button:hover{
     align-items:center;
     flex-wrap: wrap;
 }
+footer{
+    margin-top: 100px;
+    display: flex;
+    flex-direction: column;
+    align-items:center;
+}
