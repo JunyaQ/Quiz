@@ -84,6 +84,7 @@ function compare0(){
         }
         else{
             timer.innerText=score;
+            stop();
             alert("name and highest score");
             var nameinital = prompt("name");
             localStorage.setItem(nameinital,score);
@@ -100,6 +101,7 @@ function compare0(){
             }
             else{
                 timer.innerText=score;
+                stop();
                 alert("name and highest score");
                 var nameinital = prompt("name");
                 localStorage.setItem(nameinital,score);
@@ -118,6 +120,7 @@ function compare1(){
             }
             else{
                 timer.innerText=score;
+                stop();
                 alert("name and highest score");
                 questioncounter++;
                 var nameinital = prompt("name");
@@ -135,6 +138,7 @@ function compare1(){
             }
             else{
                 timer.innerText=score;
+                stop();
                 alert("name and highest score");
                 questioncounter++;
                 var nameinital = prompt("name");
@@ -154,6 +158,7 @@ function compare2(){
             }
             else{
                 timer.innerText=score;
+                stop();
                 alert("name and highest score");
                 questioncounter++;
                 var nameinital = prompt("name");
@@ -170,6 +175,7 @@ function compare2(){
             }
             else{
                 timer.innerText=score;
+                stop();
                 alert("name and highest score");
                 questioncounter++;
                 var nameinital = prompt("name");
@@ -189,6 +195,7 @@ function compare3(){
             }
             else{
                 timer.innerText=score;
+                stop();
                 alert("name and highest score");
                 questioncounter++;
                 var nameinital = prompt("name");
@@ -205,6 +212,7 @@ function compare3(){
             }
             else{
                 timer.innerText=score;
+                stop();
                 alert("name and highest score");
                 questioncounter++;
                 var nameinital = prompt("name");
@@ -236,16 +244,30 @@ if(score >=0 && questioncounter <=totalquestion && starter==true){
 else{
     clearTimeout(space);
     starter == false;
+    score = score+1;
+    timer.innerText=score;
+    stop();
+    alert("name and highest score");
+    var nameinital = prompt("name");
+    localStorage.setItem(nameinital,score);
     }
 
 }
-//stop timer
+//stop 
+function stop(){
+    document.getElementById("choice0").style.pointerEvents ='none';
+    document.getElementById("choice1").style.pointerEvents ='none';
+    document.getElementById("choice2").style.pointerEvents ='none';
+    document.getElementById("choice3").style.pointerEvents ='none';
+
+}
 
 
 function start(){
     countdown();
     getquestionchoices();
     check();
+
     console.log("start"+score);
     console.log(typeof(score));
     console.log("score "+score);
