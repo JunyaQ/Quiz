@@ -31,11 +31,19 @@
         var showfinalscore = finalscore;
         showscore.innerText = showfinalscore;
         
+
         function myFunction(){
+        
         var name = document.getElementById("nameinitial").value;
-        localStorage.setItem("name",name);
-        localStorage.setItem(name,finalscore);
+        var num = localStorage.length;
+        console.log("length "+num);
+        var combo = [];
+        combo.push(name);
+        combo.push(showfinalscore);
+        localStorage.setItem(num, combo);
+        localStorage.removeItem("finalscore");
         document. getElementById("submitbutton"). disabled = true
+        num++;
         }
         
     </script>

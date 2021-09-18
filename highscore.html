@@ -18,21 +18,16 @@
 
 </div>
 <script>
-    var scorelistlength = localStorage.length;
-    console.log(scorelistlength);
-    var namelist = localStorage.getItem("name");
-    for(var i=0; i<scorelistlength;){
-        i=i+3;
+    //var scorelistlength = localStorage.length;
+   // console.log(scorelistlength);
+    var nameitem = JSON.parse(localStorage.getItem("inputname"));
+    console.log("namelist "+nameitem);
+    var scoreitem = JSON.parse(localStorage.getItem("inputscore"));
+    console.log("scorelist "+scoreitem);
+    
+    for(var i=0; i<5;i++){
         if (typeof(Storage) !== "undefined") {
-       var nameitem = localStorage.getItem("name");
-       document.getElementById("namelist").innerHTML = nameitem;
-       localStorage.removeItem("name",nameitem);
-       localStorage.setItem("name",nameitem);
-       var scoreitem= localStorage.getItem(localStorage.key(i));
-       localStorage.removeItem(nameitem,scoreitem);
-       localStorage.setItem(nameitem,scoreitem);
-       document.getElementById("scorelist").innerHTML = scoreitem;
-       //console.log(scoreitem);
+       
         }
         else{
             document.getElementById("namelist").innerHTML = "browser doesn't support";
