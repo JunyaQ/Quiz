@@ -253,7 +253,7 @@ function check(){
 //timer countdown
 function countdown(){
     var starter = true;
-if(score >=0 && questioncounter <=totalquestion && starter==true){
+if(score >0 && questioncounter <=totalquestion && starter==true){
     var space;
     timer.innerText = score;
     score = score -1;
@@ -262,7 +262,6 @@ if(score >=0 && questioncounter <=totalquestion && starter==true){
 else{
     clearTimeout(space);
     starter == false;
-    score = score+1;
     timer.innerText=score;
     finalscore = score;
     stop();

@@ -1,0 +1,32 @@
+.container{
+    text-align: center;
+    display: inline-block;
+    margin-right: auto;
+    vertical-align: middle;
+    display: flex;
+    flex-direction: column;
+    align-items:center;
+    flex-wrap: wrap;
+}
+footer{
+    margin-top: 100px;
+    display: flex;
+    flex-direction: column;
+    align-items:center;
+}
+.mainpage{
+    font-size: 20px;
+    position: absolute;
+    top: 10px;
+    right: 30px;
+}
+.viewmainpage:link, .viewmainpage:hover, .viewmainpage:visited, .viewmainpage:active{
+    text-decoration: none;
+    color: plum;
+}
+.scorelist{
+    font-family: 'Courier New', Courier, monospace;
+    display: block;
+    margin: 0 auto;
+    margin-top: 50px;
+}
