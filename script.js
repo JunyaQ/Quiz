@@ -100,6 +100,16 @@ function compare0(){
             timer.innerText=score;
             getquestionchoices();
             }
+            else if(score <0 && questioncounter<totalquestion){
+                score =0;
+                timer.innerText = 0;
+                finalscore = 0;
+                stop();
+                questioncounter++;
+                localStorage.setItem("finalscore",score);
+                window.open('./submit.html');
+
+            }
             else{
                 timer.innerText=score;
                 finalscore = score;
@@ -143,6 +153,16 @@ function compare1(){
             timer.innerText=score;
             getquestionchoices();
             }
+            else if(score <0 && questioncounter<totalquestion){
+                score =0;
+                timer.innerText = 0;
+                finalscore = 0;
+                stop();
+                questioncounter++;
+                localStorage.setItem("finalscore",score);
+                window.open('./submit.html');
+
+            }
             else{
                 timer.innerText=score;
                 finalscore = score;
@@ -185,6 +205,16 @@ function compare2(){
             timer.innerText=score;
             getquestionchoices();
             }
+            else if(score <0 && questioncounter<totalquestion){
+                score =0;
+                timer.innerText = 0;
+                finalscore = 0;
+                stop();
+                questioncounter++;
+                localStorage.setItem("finalscore",score);
+                window.open('./submit.html');
+
+            }
             else{
                 timer.innerText=score;
                 finalscore = score;
@@ -226,6 +256,16 @@ function compare3(){
             timer.innerText=score;
             getquestionchoices();
             }
+            else if(score <0 && questioncounter<totalquestion){
+                score =0;
+                timer.innerText = 0;
+                finalscore = 0;
+                stop();
+                questioncounter++;
+                localStorage.setItem("finalscore",score);
+                window.open('./submit.html');
+
+            }
             else{
                 timer.innerText=score;
                 finalscore = score;
@@ -265,8 +305,6 @@ else{
     timer.innerText=score;
     finalscore = score;
     stop();
-    //alert("name and highest score");
-    //name storage
     localStorage.setItem("finalscore",score);
     window.open( './submit.html');
     }
