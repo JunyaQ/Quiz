@@ -12,18 +12,22 @@
     <div class="container" id="container">
     <h1>All done!</h1>
     <br/>
-    <h3>Your final score is <p> "number"</p></h3>
+    <h3>Your final score is <p id="show" class="show"> "number"</p></h3>
     <br/>
     <form>
         <p>Enter Initials: </p><br/>
         <input type="text" id="nameinitial" class="nameinitial" placeholder="name inital"><br/>
         <button type="submit" class="submitbutton" id="submitbutton" onclick="myFunction()">Submit</button>
+    
         <!--onclick="submitscore(event)"-->
     </form>
 </div>
     
     <script>
+        var showscore = document.getElementById("show");
         var finalscore = localStorage.getItem("finalscore");
+        var showfinalscore = finalscore;
+        showscore.innerText = showfinalscore;
         localStorage.removeItem("finalscore");
         function myFunction(){
         var name = document.getElementById("nameinitial").value;
