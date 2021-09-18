@@ -25,9 +25,19 @@
     var scoreitem = JSON.parse(localStorage.getItem("inputscore"));
     console.log("scorelist "+scoreitem);
     
-    for(var i=0; i<5;i++){
+    for(var i=0; i<localStorage.length;i++){
         if (typeof(Storage) !== "undefined") {
-       
+       var key = localStorage.key(i);
+       var totalstring = localStorage.getItem(key);
+       console.log(typeof(totalstring));
+       console.log("total "+totalstring);
+       var totalarray = totalstring.split(/[","]+/);
+       console.log("array "+totalarray);
+       nameitem = totalarray[0];
+       document.getElementById("namelist").innerHTML = nameitem;
+       scoreitem = totalarray[1];
+       document.getElementById("scorelist").innerHTML = scoreitem;
+       //console.log(scoreitem);
         }
         else{
             document.getElementById("namelist").innerHTML = "browser doesn't support";
