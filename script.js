@@ -273,8 +273,6 @@ else{
     }
 
 }
-
-
 //stop 
 function stop(){
     document.getElementById("choice0").style.pointerEvents ='none';
