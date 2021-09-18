@@ -16,12 +16,20 @@
     <br/>
     <form>
         <p>Enter Initials: </p><br/>
-        <input type="text" id="nameinital" class="nameinitial" placeholder="name inital"><br/>
-        <button type="submit" class="submitbutton" id="submitbutton" href="highscore.html">Submit</button>
+        <input type="text" id="nameinitial" class="nameinitial" placeholder="name inital"><br/>
+        <button type="submit" class="submitbutton" id="submitbutton" onclick="myFunction()">Submit</button>
         <!--onclick="submitscore(event)"-->
     </form>
 </div>
-    <script src="script.js"></script>
+    
+    <script>
+        var finalscore = localStorage.getItem("finalscore");
+        localStorage.removeItem("finalscore");
+        function myFunction(){
+        var name = document.getElementById("nameinitial").value;
+        localStorage.setItem(name,finalscore);
+        }
+    </script>
 
     <footer>
         &copy;By Junya

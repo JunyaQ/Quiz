@@ -84,14 +84,11 @@ function compare0(){
         }
         else{
             timer.innerText=score;
+            finalscore = score;
             stop();
-            alert("name and highest score");
-            //var nameinital = prompt("name");
             //name and storage
-            //document.getElementById("submitnameinitial").click== true;
+            localStorage.setItem("finalscore",score);
             window.open('./submit.html');
-            var nameinitial = document.getElementById("nameinitial");
-            localStorage.setItem(nameinitial,score);
         }
     }
     else if(chooseanswer!=correctanswer){
@@ -105,14 +102,13 @@ function compare0(){
             }
             else{
                 timer.innerText=score;
+                finalscore = score;
                 stop();
-                alert("name and highest score");
+                //alert("name and highest score");
                 //var nameinital = prompt("name");
                 //name and storage
-                //document.getElementById("submitnameinitial").click== true;
+                localStorage.setItem("finalscore",score);
                 window.open('./submit.html');
-                var nameinitial = document.getElementById("nameinitial");
-                localStorage.setItem(nameinital,score);
             }
     }
 }
@@ -128,15 +124,14 @@ function compare1(){
             }
             else{
                 timer.innerText=score;
+                finalscore = score;
                 stop();
-                alert("name and highest score");
+                //alert("name and highest score");
                 questioncounter++;
                 //var nameinital = prompt("name");
                 //name and storage
-                //document.getElementById("submitnameinitial").click== true;
+                localStorage.setItem("finalscore",score);
                 window.open('./submit.html');
-                var nameinitial = document.getElementById("nameinitial");
-                localStorage.setItem(nameinitial,score);
             }
     }
     else if(chooseanswer!=correctanswer){
@@ -150,15 +145,14 @@ function compare1(){
             }
             else{
                 timer.innerText=score;
+                finalscore = score;
                 stop();
-                alert("name and highest score");
+               // alert("name and highest score");
                 questioncounter++;
                // var nameinital = prompt("name");
                //name and storage
-              //document.getElementById("submitnameinitial").click== true;
+              localStorage.setItem("finalscore",score);
               window.open('./submit.html');
-               var nameinitial = document.getElementById("nameinitial");
-               localStorage.setItem(nameinitial,score);
             }
     }
 }
@@ -174,14 +168,13 @@ function compare2(){
             }
             else{
                 timer.innerText=score;
+                finalscore = score;
                 stop();
-                alert("name and highest score");
+                //alert("name and highest score");
                 questioncounter++;
                 //name and storage
-                //document.getElementById("submitnameinitial").click== true;
+                localStorage.setItem("finalscore",score);
                 window.open('./submit.html');
-                var nameinitial = document.getElementById("nameinitial");
-                localStorage.setItem(nameinitial,score);
             }
     }
     else if(chooseanswer!=correctanswer){
@@ -194,14 +187,13 @@ function compare2(){
             }
             else{
                 timer.innerText=score;
+                finalscore = score;
                 stop();
-                alert("name and highest score");
+                //alert("name and highest score");
                 questioncounter++;
                 //name and storage
-                //document.getElementById("submitnameinitial").click== true;
+                localStorage.setItem("finalscore",score);
                 window.open('./submit.html');
-                var nameinitial = document.getElementById("nameinitial");
-                localStorage.setItem(nameinitial,score);
             }
     }
 }
@@ -217,14 +209,13 @@ function compare3(){
             }
             else{
                 timer.innerText=score;
+                finalscore = score;
                 stop();
-                alert("name and highest score");
+                //alert("name and highest score");
                 questioncounter++;
                 //name and storage
-                //document.getElementById("submitnameinitial").click== true;
+                localStorage.setItem("finalscore",score);
                 window.open('./submit.html');
-                var nameinitial = document.getElementById("nameinitial");
-                localStorage.setItem(nameinitial,score);
             }
     }
     else if(chooseanswer!=correctanswer){
@@ -237,14 +228,13 @@ function compare3(){
             }
             else{
                 timer.innerText=score;
+                finalscore = score;
                 stop();
-                alert("name and highest score");
+                //alert("name and highest score");
                 questioncounter++;
                 //name and storage
-                //document.getElementById("submitnameinitial").click== true;
+                localStorage.setItem("finalscore",score);
                 window.open('./submit.html');
-                var nameinitial = document.getElementById("nameinitial");
-                localStorage.setItem(nameinitial,score);
             }
     }
 }
@@ -274,16 +264,17 @@ else{
     starter == false;
     score = score+1;
     timer.innerText=score;
+    finalscore = score;
     stop();
-    alert("name and highest score");
+    //alert("name and highest score");
     //name storage
-    //document.getElementById("submitnameinitial").click== true;
-    window.open( 'submit.html');
-    var nameinitial = document.getElementById("nameinitial");
-    localStorage.setItem(nameinitial,score);
+    localStorage.setItem("finalscore",score);
+    window.open( './submit.html');
     }
 
 }
+
+
 //stop 
 function stop(){
     document.getElementById("choice0").style.pointerEvents ='none';
