@@ -72,7 +72,7 @@ function getquestionchoices(){
 
 /**compare function, compare correct answer to the clicked answer -- compare, return result, turn to the next question and score*/
 function compare0(){
-    var submitpage = document.getElementById("nameinitial");
+    //var submitpage = document.getElementById("nameinitial");
     console.log("score "+score);
     console.log("this is 0");
     chooseanswer = currentquestion.options[0];
@@ -86,8 +86,12 @@ function compare0(){
             timer.innerText=score;
             stop();
             alert("name and highest score");
-            var nameinital = prompt("name");
-            localStorage.setItem(nameinital,score);
+            //var nameinital = prompt("name");
+            //name and storage
+            //document.getElementById("submitnameinitial").click== true;
+            window.open('./submit.html');
+            var nameinitial = document.getElementById("nameinitial");
+            localStorage.setItem(nameinitial,score);
         }
     }
     else if(chooseanswer!=correctanswer){
@@ -103,7 +107,11 @@ function compare0(){
                 timer.innerText=score;
                 stop();
                 alert("name and highest score");
-                var nameinital = prompt("name");
+                //var nameinital = prompt("name");
+                //name and storage
+                //document.getElementById("submitnameinitial").click== true;
+                window.open('./submit.html');
+                var nameinitial = document.getElementById("nameinitial");
                 localStorage.setItem(nameinital,score);
             }
     }
@@ -123,8 +131,12 @@ function compare1(){
                 stop();
                 alert("name and highest score");
                 questioncounter++;
-                var nameinital = prompt("name");
-                localStorage.setItem(nameinital,score);
+                //var nameinital = prompt("name");
+                //name and storage
+                //document.getElementById("submitnameinitial").click== true;
+                window.open('./submit.html');
+                var nameinitial = document.getElementById("nameinitial");
+                localStorage.setItem(nameinitial,score);
             }
     }
     else if(chooseanswer!=correctanswer){
@@ -141,8 +153,12 @@ function compare1(){
                 stop();
                 alert("name and highest score");
                 questioncounter++;
-                var nameinital = prompt("name");
-                localStorage.setItem(nameinital,score);
+               // var nameinital = prompt("name");
+               //name and storage
+              //document.getElementById("submitnameinitial").click== true;
+              window.open('./submit.html');
+               var nameinitial = document.getElementById("nameinitial");
+               localStorage.setItem(nameinitial,score);
             }
     }
 }
@@ -161,8 +177,11 @@ function compare2(){
                 stop();
                 alert("name and highest score");
                 questioncounter++;
-                var nameinital = prompt("name");
-                localStorage.setItem(nameinital,score);
+                //name and storage
+                //document.getElementById("submitnameinitial").click== true;
+                window.open('./submit.html');
+                var nameinitial = document.getElementById("nameinitial");
+                localStorage.setItem(nameinitial,score);
             }
     }
     else if(chooseanswer!=correctanswer){
@@ -178,8 +197,11 @@ function compare2(){
                 stop();
                 alert("name and highest score");
                 questioncounter++;
-                var nameinital = prompt("name");
-                localStorage.setItem(nameinital,score);
+                //name and storage
+                //document.getElementById("submitnameinitial").click== true;
+                window.open('./submit.html');
+                var nameinitial = document.getElementById("nameinitial");
+                localStorage.setItem(nameinitial,score);
             }
     }
 }
@@ -198,8 +220,11 @@ function compare3(){
                 stop();
                 alert("name and highest score");
                 questioncounter++;
-                var nameinital = prompt("name");
-                localStorage.setItem(nameinital,score);
+                //name and storage
+                //document.getElementById("submitnameinitial").click== true;
+                window.open('./submit.html');
+                var nameinitial = document.getElementById("nameinitial");
+                localStorage.setItem(nameinitial,score);
             }
     }
     else if(chooseanswer!=correctanswer){
@@ -215,8 +240,11 @@ function compare3(){
                 stop();
                 alert("name and highest score");
                 questioncounter++;
-                var nameinital = prompt("name");
-                localStorage.setItem(nameinital,score);
+                //name and storage
+                //document.getElementById("submitnameinitial").click== true;
+                window.open('./submit.html');
+                var nameinitial = document.getElementById("nameinitial");
+                localStorage.setItem(nameinitial,score);
             }
     }
 }
@@ -248,8 +276,11 @@ else{
     timer.innerText=score;
     stop();
     alert("name and highest score");
-    var nameinital = prompt("name");
-    localStorage.setItem(nameinital,score);
+    //name storage
+    //document.getElementById("submitnameinitial").click== true;
+    window.open( 'submit.html');
+    var nameinitial = document.getElementById("nameinitial");
+    localStorage.setItem(nameinitial,score);
     }
 
 }
