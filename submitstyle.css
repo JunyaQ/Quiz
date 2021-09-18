@@ -1,4 +1,16 @@
 
+:root{
+    background-color: whitesmoke;
+    font-size: 15px;
+}
+*{
+    box-sizing: border-box;
+    font-family: 'Courier New', Courier, monospace;
+    margin: 0;
+    padding: 0;
+    color: black;
+
+}
 .done{
     font-family: 'Courier New', Courier, monospace;
     display: block;
