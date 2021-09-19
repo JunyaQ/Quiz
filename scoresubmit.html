@@ -37,25 +37,32 @@
     console.log("namelist "+nameitem);
     var scoreitem = JSON.parse(localStorage.getItem("inputscore"));
     console.log("scorelist "+scoreitem);
-    
+    var namelist = document.getElementById("namelist");
+    var scorelist = document.getElementById("scorelist");
     for(var i=0; i<localStorage.length;i++){
         if (typeof(Storage) !== "undefined") {
+      //create p while fetch the value array with the key
        var key = localStorage.key(i);
        var totalstring = localStorage.getItem(key);
        console.log(typeof(totalstring));
-       console.log("total "+totalstring);
+       //console.log("total "+totalstring);
        var totalarray = totalstring.split(/[","]+/);
-       console.log("array "+totalarray);
+      // console.log("array "+totalarray);
        nameitem = totalarray[0];
-       console.log("name "+nameitem);
-       document.getElementById("namelist").innerHTML= nameitem;
-       
+       var singlename = document.createElement("p");
+       namelist.append(singlename,nameitem);
+       //console.log("name "+nameitem);
+       //document.getElementById("namelist").innerText= nameitem;
+
        scoreitem = totalarray[1];
-       document.getElementById("scorelist").innerHTML = scoreitem;
+       var singlescore = document.createElement("p");
+       scorelist.append(singlescore,scoreitem);
+       //document.getElementById("scorelist").innerText = scoreitem;
        //console.log(scoreitem);
         }
         else{
             document.getElementById("namelist").innerHTML = "browser doesn't support";
+            
         }
     }
 
