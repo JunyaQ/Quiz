@@ -10,8 +10,8 @@
 </head>
 <body>
     <div class="container" id="container">
-    <h1 class="highest" id="highest"><a class="viewhighest" href="highscore.html">view highest score</a></h1>
-    <h1 class="mainpage" id="mainpage"><a class="viewmainpage" href="index.html">Exit to main page</a></h1>
+    <h1 class="highest" id="highest"><a class="viewhighest" href="highscore.html" target="_self">view highest score</a></h1>
+    <h1 class="mainpage" id="mainpage"><a class="viewmainpage" href="index.html" target="_self">Exit to main page</a></h1>
     <h1 class="done" id="done">All done!</h1>
     <br/>
     <h3>Your final score is <p id="show" class="show"> "number"</p></h3>
@@ -19,7 +19,7 @@
     <form>
         <p>Enter Initials: </p><br/>
         <input type="text" id="nameinitial" class="nameinitial" placeholder="name inital"><br/>
-        <a href="highscore.html"><button type="submit" class="submitbutton" id="submitbutton" onclick="myFunction()">Submit</button></a>
+        <a href="scoresubmit.html"><button type="submit" class="submitbutton" id="submitbutton" onclick="myFunction()">Submit</button></a>
     
         <!--onclick="submitscore(event) -> to highscore page"-->
     </form>

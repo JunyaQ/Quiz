@@ -6,15 +6,28 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>High score</title>
     <link rel="stylesheet" href="reset.css">
-    <link rel="stylesheet" href="highscorestyle.css">
+    <link rel="stylesheet" href="scoresubmitstyle.css">
 </head>
 <body>
     <div class="container" id="container">
     <h1 id="highscore" class="highscore">high score</h1>
-    <h1 class="mainpage" id="mainpage"><a class="viewmainpage" href="index.html">Exit to main page</a></h1>
+    <h1 class="mainpage" id="mainpage"><a class="viewmainpage" href="index.html" target="_slef">Exit to main page</a></h1>
 
-    <div id="namelist" class="namelist"></div>
-    <div id="scorelist" class="scorelist"></div>
+    <div id="namelist" class="namelist">
+        <p></p>
+        <p></p>
+    </div>
+    <br/>
+    <div id="scorelist" class="scorelist">
+        <p></p>
+        <p></p>
+
+    </div>
+
+    <div id="btn" class="btn">
+    <a class="view" href="index.html"><button class="mainbtn" id="mainbtn"> Go Back</button></a>
+    <a class="clearscore" onclick="clearscore()"><button class="clearbtn" id="clearbtn"> Clear scroe</button></a>
+    </div>
 
 </div>
 <script>
@@ -34,7 +47,9 @@
        var totalarray = totalstring.split(/[","]+/);
        console.log("array "+totalarray);
        nameitem = totalarray[0];
-       document.getElementById("namelist").innerHTML = nameitem;
+       console.log("name "+nameitem);
+       document.getElementById("namelist").innerHTML= nameitem;
+       
        scoreitem = totalarray[1];
        document.getElementById("scorelist").innerHTML = scoreitem;
        //console.log(scoreitem);
@@ -43,6 +58,13 @@
             document.getElementById("namelist").innerHTML = "browser doesn't support";
         }
     }
+
+    function clearscore(){
+        localStorage.clear();
+        location.reload();
+       //console.log(scoreitem);
+   
+}
 </script>
 <footer>
     &copy;By Junya

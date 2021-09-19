@@ -59,3 +59,37 @@ footer{
     background-color: cornsilk;
     color: black;
 }
+.mainbtn{
+    font-family: 'Courier New', Courier, monospace;
+    border: 2px solid ;
+    background-color: purple;
+    padding: 5px 15px 0;
+    width: 200px;
+    border-radius: 8px;
+    color: white;
+    font-size: 20px;
+}
+
+
+maintbn:hover, .mainbtn:hover, .mainbtn:hover, .mainbtn:hover{
+    background-color: plum;
+}
+.btn{
+    position: absolute;
+    left: 35%;
+    bottom: 30%;
+}
+.clearbtn{
+    font-family: 'Courier New', Courier, monospace;
+    border: 2px solid ;
+    background-color: purple;
+    padding: 5px 15px 0;
+    width: 200px;
+    border-radius: 8px;
+    color: white;
+    font-size: 20px;
+
+}
+clearbtn:hover, .clearbtn:hover, .clearbtn:hover, .clearbtn:hover{
+    background-color: plum;
+}
