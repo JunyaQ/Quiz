@@ -86,7 +86,7 @@ function compare0(){
             stop();
             //name and storage
             localStorage.setItem("finalscore",score);
-            window.open('./submit.html');
+            window.open('./submit.html',"_self");
         }
     }
     else if(chooseanswer!=correctanswer){
@@ -105,7 +105,7 @@ function compare0(){
                 stop();
                 questioncounter++;
                 localStorage.setItem("finalscore",score);
-                window.open('./submit.html');
+                window.open('./submit.html',"_self");
 
             }
             else{
@@ -116,7 +116,7 @@ function compare0(){
                 //var nameinital = prompt("name");
                 //name and storage
                 localStorage.setItem("finalscore",score);
-                window.open('./submit.html');
+                window.open('./submit.html',"_self");
             }
     }
 }
@@ -139,7 +139,7 @@ function compare1(){
                 //var nameinital = prompt("name");
                 //name and storage
                 localStorage.setItem("finalscore",score);
-                window.open('./submit.html');
+                window.open('./submit.html',"_self");
             }
     }
     else if(chooseanswer!=correctanswer){
@@ -158,7 +158,7 @@ function compare1(){
                 stop();
                 questioncounter++;
                 localStorage.setItem("finalscore",score);
-                window.open('./submit.html');
+                window.open('./submit.html',"_self");
 
             }
             else{
@@ -170,7 +170,7 @@ function compare1(){
                // var nameinital = prompt("name");
                //name and storage
               localStorage.setItem("finalscore",score);
-              window.open('./submit.html');
+              window.open('./submit.html',"_self");
             }
     }
 }
@@ -192,7 +192,7 @@ function compare2(){
                 questioncounter++;
                 //name and storage
                 localStorage.setItem("finalscore",score);
-                window.open('./submit.html');
+                window.open('./submit.html',"_self");
             }
     }
     else if(chooseanswer!=correctanswer){
@@ -210,7 +210,7 @@ function compare2(){
                 stop();
                 questioncounter++;
                 localStorage.setItem("finalscore",score);
-                window.open('./submit.html');
+                window.open('./submit.html',"_self");
 
             }
             else{
@@ -221,7 +221,7 @@ function compare2(){
                 questioncounter++;
                 //name and storage
                 localStorage.setItem("finalscore",score);
-                window.open('./submit.html');
+                window.open('./submit.html',"_self");
             }
     }
 }
@@ -243,7 +243,7 @@ function compare3(){
                 questioncounter++;
                 //name and storage
                 localStorage.setItem("finalscore",score);
-                window.open('./submit.html');
+                window.open('./submit.html',"_self");
             }
     }
     else if(chooseanswer!=correctanswer){
@@ -261,7 +261,7 @@ function compare3(){
                 stop();
                 questioncounter++;
                 localStorage.setItem("finalscore",score);
-                window.open('./submit.html');
+                window.open('./submit.html',"_self");
 
             }
             else{
@@ -272,7 +272,7 @@ function compare3(){
                 questioncounter++;
                 //name and storage
                 localStorage.setItem("finalscore",score);
-                window.open('./submit.html');
+                window.open('./submit.html',"_self");
             }
     }
 }
@@ -304,7 +304,7 @@ else{
     finalscore = score;
     stop();
     localStorage.setItem("finalscore",score);
-    window.open( './submit.html');
+    window.open( './submit.html',"_self");
     }
 
 }
