@@ -1,5 +1,4 @@
 # bootcamp-challenge-04
-# bootcamp-challenge-04
 WHEN load the page<br/>
 THEN can choose to see the previous score or start the quiz. User has 1 mins to do the quiz<br/>
 WHEN start the quiz<br/>
