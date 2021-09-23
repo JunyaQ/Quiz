@@ -5,8 +5,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>High score</title>
-    <link rel="stylesheet" href="reset.css">
-    <link rel="stylesheet" href="scoresubmitstyle.css">
+    <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="/css/scoresubmitstyle.css">
 </head>
 <body>
     <div class="container" id="container">
@@ -41,7 +41,7 @@
     var scorelist = document.getElementById("scorelist");
     for(var i=0; i<localStorage.length;i++){
         if (typeof(Storage) !== "undefined") {
-      //create p while fetch the value array with the key
+      //create key while fetch the value array with the key
        var key = localStorage.key(i);
        var totalstring = localStorage.getItem(key);
        console.log(typeof(totalstring));
