@@ -18,3 +18,5 @@ THEN bring user to the start page, you can choose to start the page again<br/>
 WHEN click onto the clear all score button<br/>
 THEN clear all the score originally in the local storage<br/>
 <img src="./img/webpagemain.jpg">
+<br/>
+The deployed website URL: https://junyaq.github.io/bootcamp-challenge-04/
