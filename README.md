@@ -24,6 +24,8 @@ WHEN click onto the clear all score button<br/>
 THEN clear all the score originally in the local storage<br/>
 
 ## Technologies use
+- HTML
+- CSS
 - Javascript 
 
 ## Demo
