@@ -1,4 +1,9 @@
 # Quiz
+
+## Javascript Quiz
+This is a webapge shows multiple chocie questions about javascript. When you finish the quiz or the time count down to 0, you can put your inital and your score will be shown on the score page 
+
+## About Javascript Quiz
 WHEN load the page<br/>
 THEN can choose to see the previous score or start the quiz. User has 1 mins to do the quiz<br/>
 WHEN start the quiz<br/>
@@ -17,6 +22,10 @@ WHEN click onto the back to main page<br/>
 THEN bring user to the start page, you can choose to start the page again<br/>
 WHEN click onto the clear all score button<br/>
 THEN clear all the score originally in the local storage<br/>
-<img src="./img/webpagemain.jpg">
-<br/>
-The deployed website URL: https://junyaq.github.io/bootcamp-challenge-04/
+
+## Technologies use
+- Javascript 
+
+## Demo
+![main page](https://github.com/JunyaQ/Quiz/blob/main/img/webpagemain.jpg)
+The deployed website URL: https://junyaq.github.io/Quiz/
